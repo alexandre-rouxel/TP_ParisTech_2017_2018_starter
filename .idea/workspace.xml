@@ -1,7 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c3287ad-8bc1-41d2-ad0f-698bd2e49a55" name="Default" comment="" />
+    <list default="true" id="3c3287ad-8bc1-41d2-ad0f-698bd2e49a55" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/0_regexTok_d0eba840be33/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/0_regexTok_d0eba840be33/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/0_regexTok_d0eba840be33/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/0_regexTok_d0eba840be33/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/1_stopWords_c0fd49b80eba/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/1_stopWords_c0fd49b80eba/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/1_stopWords_c0fd49b80eba/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/1_stopWords_c0fd49b80eba/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/data/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/data/.part-00000-451a0ed3-71ea-4f30-9dd9-db8f675e7ba3-c000.snappy.parquet.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/data/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/data/part-00000-451a0ed3-71ea-4f30-9dd9-db8f675e7ba3-c000.snappy.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/2_cntVec_09e92d8ef0ef/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/data/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/data/.part-00000-89edd036-2284-44cf-b89a-11b30daa9f1c-c000.snappy.parquet.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/data/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/data/part-00000-89edd036-2284-44cf-b89a-11b30daa9f1c-c000.snappy.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/3_idf_c290bcecfc79/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/data/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/data/.part-00000-2b914118-a594-42de-8a33-4ea3bfbcd221-c000.snappy.parquet.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/data/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/data/part-00000-2b914118-a594-42de-8a33-4ea3bfbcd221-c000.snappy.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/4_strIdx_b9394f3efcdb/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/data/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/data/.part-00000-28c8a5ff-d415-4823-a376-1e44c56a22fc-c000.snappy.parquet.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/data/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/data/part-00000-28c8a5ff-d415-4823-a376-1e44c56a22fc-c000.snappy.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/5_strIdx_678029772bab/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/6_vecAssembler_f0e4f9110f47/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/6_vecAssembler_f0e4f9110f47/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/6_vecAssembler_f0e4f9110f47/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/6_vecAssembler_f0e4f9110f47/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/data/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/data/.part-00000-81402ffc-161a-471f-924d-82135616db5d-c000.snappy.parquet.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/data/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/data/part-00000-81402ffc-161a-471f-924d-82135616db5d-c000.snappy.parquet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/stages/7_logreg_d39bcdb14fc4/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/0_regexTok_d0eba840be33/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/0_regexTok_d0eba840be33/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/0_regexTok_d0eba840be33/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/0_regexTok_d0eba840be33/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/1_stopWords_c0fd49b80eba/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/1_stopWords_c0fd49b80eba/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/1_stopWords_c0fd49b80eba/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/1_stopWords_c0fd49b80eba/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/2_cntVec_09e92d8ef0ef/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/2_cntVec_09e92d8ef0ef/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/2_cntVec_09e92d8ef0ef/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/2_cntVec_09e92d8ef0ef/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/3_idf_c290bcecfc79/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/3_idf_c290bcecfc79/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/3_idf_c290bcecfc79/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/3_idf_c290bcecfc79/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/4_strIdx_b9394f3efcdb/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/4_strIdx_b9394f3efcdb/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/4_strIdx_b9394f3efcdb/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/4_strIdx_b9394f3efcdb/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/5_strIdx_678029772bab/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/5_strIdx_678029772bab/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/5_strIdx_678029772bab/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/5_strIdx_678029772bab/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/6_vecAssembler_f0e4f9110f47/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/6_vecAssembler_f0e4f9110f47/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/6_vecAssembler_f0e4f9110f47/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/6_vecAssembler_f0e4f9110f47/metadata/part-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/7_logreg_d39bcdb14fc4/metadata/._SUCCESS.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/7_logreg_d39bcdb14fc4/metadata/.part-00000.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/7_logreg_d39bcdb14fc4/metadata/_SUCCESS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/stages/7_logreg_d39bcdb14fc4/metadata/part-00000" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/metadata/.part-00000.crc" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/metadata/.part-00000.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/metadata/.part-00000.crc" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/metadata/.part-00000.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/evaluator/metadata/.part-00000.crc" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/evaluator/metadata/.part-00000.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/metadata/.part-00000.crc" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/metadata/.part-00000.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/TP_ParisTech_2017_2018-assembly-1.0.jar" afterPath="$PROJECT_DIR$/target/scala-2.11/TP_ParisTech_2017_2018-assembly-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/sparkProject/Trainer$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/sparkProject/Trainer$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/sparkProject/Trainer$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/sparkProject/Trainer$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/assembly/$global/streams/assembly-inputs" afterPath="$PROJECT_DIR$/target/streams/$global/assembly/$global/streams/assembly-inputs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/assemblyOption/$global/streams/assembly/e57bd0e1612aa259630e2845ad9f5e63342fdd33_dir/com/sparkProject/Trainer$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/streams/$global/assemblyOption/$global/streams/assembly/e57bd0e1612aa259630e2845ad9f5e63342fdd33_dir/com/sparkProject/Trainer$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/assemblyOption/$global/streams/assembly/e57bd0e1612aa259630e2845ad9f5e63342fdd33_dir/com/sparkProject/Trainer$.class" afterPath="$PROJECT_DIR$/target/streams/$global/assemblyOption/$global/streams/assembly/e57bd0e1612aa259630e2845ad9f5e63342fdd33_dir/com/sparkProject/Trainer$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/metadata/part-00000" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/bestModel/metadata/part-00000" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/metadata/part-00000" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/estimator/metadata/part-00000" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/evaluator/metadata/part-00000" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/evaluator/metadata/part-00000" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fittedBinaryClassifier/metadata/part-00000" afterPath="$PROJECT_DIR$/fittedBinaryClassifier/metadata/part-00000" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/sparkProject/Trainer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sparkProject/Trainer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/assembly/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/assembly/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.11" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.11" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -39,8 +145,8 @@
       <file leaf-file-name="Trainer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/sparkProject/Trainer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="158" column="56" lean-forward="false" selection-start-line="158" selection-start-column="56" selection-end-line="158" selection-end-column="56" />
+            <state relative-caret-position="810">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#26#59#0" expanded="true" />
               </folding>
@@ -83,6 +189,9 @@
       <find>df</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -101,11 +210,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="667" />
-    <option name="y" value="52" />
+    <option name="x" value="155" />
+    <option name="y" value="40" />
     <option name="width" value="1300" />
     <option name="height" value="797" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <flattenPackages />
@@ -297,7 +407,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="667" y="52" width="1300" height="797" extended-state="0" />
+    <frame x="155" y="40" width="1300" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -309,8 +419,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5127186" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41112456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2079772" sideWeight="0.4872814" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.4872814" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75536484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -771,8 +881,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sparkProject/Trainer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="158" column="56" lean-forward="false" selection-start-line="158" selection-start-column="56" selection-end-line="158" selection-end-column="56" />
+        <state relative-caret-position="810">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#26#59#0" expanded="true" />
           </folding>

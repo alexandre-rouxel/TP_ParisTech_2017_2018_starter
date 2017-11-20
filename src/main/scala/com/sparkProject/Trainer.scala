@@ -48,10 +48,11 @@ object Trainer {
       ********************************************************************************/
 
    /** CHARGER LE DATASET **/
-   // a) Charger un csv dans dataframe
+   // load .csv in a data frame
    val df : DataFrame = spark
      .read
-     .parquet("/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/data/prepared_trainingset")
+     .parquet("./data/prepared_trainingset/")
+
 
     /** TF-IDF **/
     // stage 1
@@ -133,7 +134,9 @@ object Trainer {
       .addGrid(countvectorizer.minDF,Array(55.0,95.0,20))
       .build()
 
-    //"evaluatorF1" is not supported by Binary Classifier : BinaryClassificationEvaluator
+    /** "evaluatorF1" is not supported by Binary Classifier : BinaryClassificationEvaluator
+      * so MulticlassClassificationEvaluator() is used instead
+      */
 
     val evaluatorF1 = new MulticlassClassificationEvaluator()
       .setLabelCol("final_status")
@@ -159,6 +162,8 @@ object Trainer {
     val f1Train = evaluatorF1.evaluate(trainPredictions)
 
 
+    /** Print results **/
+
     val df_WithPredictions : DataFrame = testPredictions
 
     df_WithPredictions.groupBy( "final_status" , "predictions" ).count.show()
@@ -169,10 +174,7 @@ object Trainer {
     println(f1Test)
 
     /** save the trained model **/
-    cvModel.write.overwrite().save("./fittedBinaryClassifier")
-
-
-
+    //cvModel.write.overwrite().save("./fittedBinaryClassifier")
 
   }
 }
