@@ -1,0 +1,10 @@
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo /private/var/folders/0k/x8c8hmrs0r304q4vbd_6rfcw0000gn/T/sbt-structure.xml
+all {file:/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/}tp_paristech_2017_2018_starter/products {file:/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/}tp_paristech_2017_2018_starter/test:products
+pwd
+all {file:/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/}tp_paristech_2017_2018_starter/products {file:/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/}tp_paristech_2017_2018_starter/test:products
+cvModel
+df.show()
+df
+2+3
+df.show()
+all {file:/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/}tp_paristech_2017_2018_starter/products {file:/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/}tp_paristech_2017_2018_starter/test:products

@@ -1,0 +1,211 @@
+package com.sparkProject
+
+import org.apache.spark.SparkConf
+import org.apache.spark.ml.classification.LogisticRegression
+import org.apache.spark.sql.{Column, DataFrame, SaveMode, SparkSession}
+import org.apache.spark.ml.feature.{CountVectorizer, CountVectorizerModel, IDF, RegexTokenizer, StopWordsRemover, StringIndexer}
+import org.apache.spark.sql.functions.concat_ws
+
+
+object Trainer {
+
+  def main(args: Array[String]): Unit = {
+
+    val conf = new SparkConf().setAll(Map(
+      "spark.scheduler.mode" -> "FIFO",
+      "spark.speculation" -> "false",
+      "spark.reducer.maxSizeInFlight" -> "48m",
+      "spark.serializer" -> "org.apache.spark.serializer.KryoSerializer",
+      "spark.kryoserializer.buffer.max" -> "1g",
+      "spark.shuffle.file.buffer" -> "32k",
+      "spark.default.parallelism" -> "12",
+      "spark.sql.shuffle.partitions" -> "12",
+      "spark.driver.maxResultSize" -> "2g"
+    ))
+
+    val spark = SparkSession
+      .builder
+      .config(conf)
+      .appName("TP_spark")
+      .getOrCreate()
+
+    import spark.implicits._
+
+    /*******************************************************************************
+      *
+      *       TP 4-5
+      *
+      *       - lire le fichier sauvegarder précédemment
+      *       - construire les Stages du pipeline, puis les assembler
+      *       - trouver les meilleurs hyperparamètres pour l'entraînement du pipeline avec une grid-search
+      *       - Sauvegarder le pipeline entraîné
+      *
+      *       if problems with unimported modules => sbt plugins update
+      *
+      ********************************************************************************/
+
+   /** CHARGER LE DATASET **/
+   // a) Charger un csv dans dataframe
+   val df : DataFrame = spark
+     .read
+     .parquet("/Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/data/prepared_trainingset")
+
+    /** TF-IDF **/
+    // etape 1
+    val tokenizer = new RegexTokenizer()
+      .setPattern("\\W+")
+      .setGaps(true)
+      .setInputCol("text")
+      .setOutputCol("tokens")
+
+    val tokenized = tokenizer.transform(df)
+    tokenized.select("text", "tokens")
+    //.withColumn("tokens", countTokens(col("tokens"))).show(false)
+    //tokenized.show()
+
+
+    //StopWordsRemover
+    // etape 2
+    //StopWordsRemover.loadDefaultStopWords("french")
+    val remover = new StopWordsRemover()
+      .setInputCol("tokens")
+      .setOutputCol("filtered")
+
+    //val remover = new StopWordsRemover()
+    val df_word_removed = remover.transform(tokenized)
+    //dfremoved.show()
+
+    // etape 3
+    val cvModel: CountVectorizerModel = new CountVectorizer()
+      .setInputCol("filtered")
+      .setOutputCol("vectorized")
+      .fit(df_word_removed)
+
+    val DfCountVectorizer = cvModel.transform(df_word_removed)
+    DfCountVectorizer.select("vectorized").show(2)
+
+    // etape 4
+
+    val idf = new IDF()
+      .setInputCol("vectorized")
+      .setOutputCol("tfidf")
+      .fit(DfCountVectorizer)
+
+    val df_idf  = idf.transform(DfCountVectorizer)
+    df_idf.select("tfidf").show(2,false)
+
+
+    /** VECTOR ASSEMBLER **/
+
+    // etape 5
+
+    df_idf.select("country2").show(2,false)
+    // stream indexer
+    val indexer = new StringIndexer()
+      .setInputCol("country2")
+      .setOutputCol("country_indexed")
+      .fit(df_idf)
+
+    val df_idf_indexer = indexer.transform(df_idf)
+
+    df_idf_indexer.select("country_indexed").show(2,false)
+
+
+    // etape 6
+    val indexer2 = new StringIndexer()
+      .setInputCol("currency2")
+      .setOutputCol("currency_indexed")
+      .fit(df_idf_indexer)
+
+    val df_idf_indexer_2 = indexer2.transform(df_idf_indexer)
+
+    df_idf_indexer_2.select("tfidf").show(2,false)
+
+    //df_idf_indexer_2.show(2)
+
+    /** MODEL **/
+
+
+    //étape 7
+
+    val dfFeatures= df_idf_indexer_2
+      .withColumn("features", concat_ws(" ", ($"tfidf").cast("String") , ($"days_campaign").cast("String") ,
+                                            ($"hours_prepa").cast("String") , ($"goal").cast("String") ,
+                                            ($"country_indexed").cast("String") , ($"currency_indexed").cast("String") ))
+    dfFeatures.drop("tfidf", "days_campaign", "hours_prepa", "goal","country_indexed","currency_indexed","vectorized" ,"text")
+
+
+    dfFeatures.select("final_status").show(2,false)
+
+
+    dfFeatures.printSchema()
+
+    //étape 8
+    val lr = new LogisticRegression()
+      .setElasticNetParam(0.0).setFitIntercept(true) .setFeaturesCol(" features")
+      .setLabelCol(" final_status")
+      .setStandardization(true)
+      .setPredictionCol(" predictions")
+      .setRawPredictionCol(" raw_predictions")
+      .setThresholds(Array( 0.7, 0.3) )
+      .setTol( 1.0e-6)
+      .setMaxIter( 300)
+
+
+
+    /** PIPELINE **/
+    tokenizer , DfCountVectorizer ,  cvModel , idf , indexer , indexer2 ,
+    // etape 1
+    //val tokenizer
+    // etape 2
+    //StopWordsRemover.loadDefaultStopWords("french")
+    //val remover
+    // etape 3
+    val cvModel: CountVectorizerModel = new CountVectorizer()
+      .setInputCol("filtered")
+      .setOutputCol("vectorized")
+      .fit(df_word_removed)
+
+    val DfCountVectorizer = cvModel.transform(df_word_removed)
+    DfCountVectorizer.select("vectorized").show(2)
+    // etape 4
+
+    val idf = new IDF()
+      .setInputCol("vectorized")
+      .setOutputCol("tfidf")
+      .fit(DfCountVectorizer)
+
+    val df_idf  = idf.transform(DfCountVectorizer)
+    df_idf.select("tfidf").show(2,false)
+
+    // etape 5
+
+    df_idf.select("country2").show(2,false)
+    // stream indexer
+    val indexer = new StringIndexer()
+      .setInputCol("country2")
+      .setOutputCol("country_indexed")
+      .fit(df_idf)
+    // etape 6
+    val indexer2 = new StringIndexer()
+      .setInputCol("currency2")
+      .setOutputCol("currency_indexed")
+      .fit(df_idf_indexer)
+
+    val df_idf_indexer_2 = indexer2.transform(df_idf_indexer)
+
+    //étape 7
+
+
+    val dfFeatures= df_idf_indexer_2
+      .withColumn("features", concat_ws(" ", ($"tfidf").cast("String") , ($"days_campaign").cast("String") ,
+        ($"hours_prepa").cast("String") , ($"goal").cast("String") ,
+        ($"country_indexed").cast("String") , ($"currency_indexed").cast("String") ))
+
+    //val pipeline = new Pipeline()
+    //  .setStages(Array(tokenizer, hashingTF, lr))
+
+    /** TRAINING AND GRID-SEARCH **/
+
+  }
+}
