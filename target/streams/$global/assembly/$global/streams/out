@@ -1,7 +1,7 @@
 [0m[[0mdebug[0m] [0mCalculate mappings...[0m
 [0m[[0minfo[0m] [0mChecking every *.class/*.jar file's SHA-1.[0m
 [0m[[0minfo[0m] [0mMerging files...[0m
-[0m[[0minfo[0m] [0mSHA-1: ce0b476c860eaf6c622567df87af3ea87eefec4e[0m
+[0m[[0minfo[0m] [0mSHA-1: 4959e7de8eb5805b66f88853e69632f7c461c412[0m
 [0m[[0minfo[0m] [0mPackaging /Users/alexandre/MSBGD/spark/tp/TP_ParisTech_2017_2018_starter/target/scala-2.11/TP_ParisTech_2017_2018-assembly-1.0.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
 [0m[[0mdebug[0m] [0m	com/sparkProject/Exercice$.class[0m

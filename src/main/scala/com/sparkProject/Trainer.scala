@@ -31,7 +31,7 @@ object Trainer {
       .appName("TP_spark")
       .getOrCreate()
 
-    // only for self made function
+    // only for self made functions
     // import spark.implicits._
 
     /*******************************************************************************
@@ -44,6 +44,8 @@ object Trainer {
       *       - Sauvegarder le pipeline entraîné
       *
       *       if problems with unimported modules => sbt plugins update
+      *
+      *       ALEXANDRE ROUXEL
       *
       ********************************************************************************/
 
@@ -62,7 +64,6 @@ object Trainer {
       .setInputCol("text")
       .setOutputCol("tokens")
 
-    //StopWordsRemover
     // stage 2
     val remover = new StopWordsRemover()
       .setInputCol("tokens")
@@ -86,12 +87,12 @@ object Trainer {
     // stage 5
 
     // stream indexer
-    val indexer = new StringIndexer()
+    val indexerCountry = new StringIndexer()
       .setInputCol("country2")
       .setOutputCol("country_indexed")
 
     // stage 6
-    val indexer2 = new StringIndexer()
+    val indexerCurrency = new StringIndexer()
       .setInputCol("currency2")
       .setOutputCol("currency_indexed")
 
@@ -119,11 +120,11 @@ object Trainer {
     /** PIPELINE **/
 
     val pipeline = new Pipeline()
-      .setStages(Array ( tokenizer , remover ,  countvectorizer , idf , indexer , indexer2 , vecAssembler ,lr))
+      .setStages(Array ( tokenizer , remover ,  countvectorizer , idf , indexerCountry , indexerCurrency , vecAssembler ,lr))
 
     /** TRAINING AND GRID-SEARCH **/
 
-    /** build a training set  **/
+    /** build a training set  (90 % ,  10 %) for (training , testing) **/
     val Array(training, test) = df.randomSplit(Array(0.9, 0.1), seed = 12345)
 
 
@@ -143,17 +144,17 @@ object Trainer {
       .setPredictionCol("predictions")
       .setMetricName("f1")
 
-
+    /** define the cross validation with F1 measure and 70% of the data for training */
     val cv = new TrainValidationSplit()
       .setEstimator(pipeline)
       .setEvaluator(evaluatorF1)
       .setEstimatorParamMaps(paramGrid)
       .setTrainRatio(0.7)
 
-    /** run the cross validator on the training set **/
+    /** fit the best output of the cross validator on the training set **/
     val cvModel = cv.fit(training)
 
-    /** run the cross validator on test and training set **/
+    /** transform  the test set and the training set with the best transformer found by cross validation **/
     val trainPredictions = cvModel.transform(training)
     val testPredictions = cvModel.transform(test)
 
@@ -168,9 +169,9 @@ object Trainer {
 
     df_WithPredictions.groupBy( "final_status" , "predictions" ).count.show()
 
-    println("F1 measurement on training set  ")
+    println("F1 measurement on training set  : ")
     println(f1Train)
-    println("F1 measurement on test set  ")
+    println("F1 measurement on test set   : ")
     println(f1Test)
 
     /** save the trained model **/
