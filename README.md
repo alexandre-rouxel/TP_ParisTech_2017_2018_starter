@@ -1,4 +1,3 @@
-# TP_ParisTech_2017_2018_starter
-tp spark
+Spark : ML pipeline in scala 
 The main file is Trainer.scala
 No change in .sbt files
